@@ -25,6 +25,7 @@ pipeline
                 echo 'Building app [Linux]...'
                 // cmake ...
                 echo 'App builded [Linux]'
+                echo 'mod'
             }
         }
 
