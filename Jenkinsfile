@@ -23,9 +23,9 @@ pipeline
             steps
             {
                 echo 'Building app [Linux]...'
+                sh '''python3 unstable_app.py'''
                 // cmake ...
                 echo 'App builded [Linux]'
-                echo 'mod'
             }
         }
 
@@ -34,7 +34,7 @@ pipeline
             steps 
             {         
                 echo 'Testing app [Linux]...'
-                //sh '''python3 run_tests.py'''
+                sh '''python3 run_tests.py'''
                 echo 'All tests passed [Linux]'
             }
         }
