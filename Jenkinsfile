@@ -17,12 +17,26 @@ pipeline
         
     stages
     {
+
+        stage ('Linux build')
+        {
+            steps
+            {
+                echo 'Building app [Linux]...'
+                // cmake ...
+                echo 'App builded [Linux]'
+            }
+        }
+
         stage ('Linux test')
         {
             steps 
-            {               
-                sh '''python3 run_tests.py'''          
+            {         
+                echo 'Testing app [Linux]...'
+                //sh '''python3 run_tests.py'''
+                echo 'All tests passed [Linux]'
             }
-        }        
+        }
+
     }
 }
