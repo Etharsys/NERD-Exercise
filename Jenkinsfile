@@ -23,7 +23,7 @@ pipeline
             steps
             {
                 echo 'Building app [Linux]...'
-                // sh '''python3 unstable_app.py'''
+                sh '''python3 unstable_app.py'''
                 // cmake ...
                 echo 'App builded [Linux]'
             }
