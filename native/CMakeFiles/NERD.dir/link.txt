@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/NERD.dir/src/main.c.o CMakeFiles/NERD.dir/src/features.cpp.o CMakeFiles/NERD.dir/src/platform_linux.c.o  -o NERD 
