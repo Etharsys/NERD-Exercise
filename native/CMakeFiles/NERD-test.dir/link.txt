@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/NERD-test.dir/src/test.cpp.o CMakeFiles/NERD-test.dir/src/features.cpp.o CMakeFiles/NERD-test.dir/src/platform_linux.c.o  -o NERD-test 

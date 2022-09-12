@@ -1,4 +1,0 @@
-/home/maxime/Documents/NERD/NERD_Support_Exercise/unstable_app_repo/native/CMakeFiles/rebuild_cache.dir
-/home/maxime/Documents/NERD/NERD_Support_Exercise/unstable_app_repo/native/CMakeFiles/edit_cache.dir
-/home/maxime/Documents/NERD/NERD_Support_Exercise/unstable_app_repo/native/CMakeFiles/NERD-test.dir
-/home/maxime/Documents/NERD/NERD_Support_Exercise/unstable_app_repo/native/CMakeFiles/NERD.dir

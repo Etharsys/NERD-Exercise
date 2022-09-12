@@ -18,34 +18,38 @@ pipeline
     stages
     {
 
-        stage ('Linux build')
+        stage ('Build')
         {
             steps
             {
-                echo 'Building app [Linux]...'
-                // sh '''python3 unstable_app.py'''
-                sh '''cmake unstable_app_repo/native'''
-                echo 'App builded [Linux]'
+                echo 'Building native app...'
+
+                sh '''rm -Rf native/build'''
+                sh '''mkdir native/build'''
+                dir ('native/build') 
+                {
+                    sh '''cmake ..'''
+                    sh '''make'''
+                }
+
+                echo 'Native app builded'
             }
         }
 
-        stage ('Linux test')
+        stage ('Test')
         {
             steps 
             {         
-                echo 'Testing app [Linux]...'
-                sh '''python3 run_tests.py'''
-                sh '''ls unstable_app_repo/native'''
-                echo 'All tests passed [Linux]'
-            }
-        }
+                echo 'Testing python3 app...'
 
-        stage('Linux clean')
-        {
-            steps
-            {
-                echo 'Removing build native application'
-                sh '''rm -R unstable_app_repo/native/build'''
+                sh '''python3 run_tests.py'''
+
+                echo 'Python app tests passed'
+                echo 'Testing native app...'
+
+                sh '''native/build/NERD-test'''
+                
+                echo 'Native app tests passed'
             }
         }
 
